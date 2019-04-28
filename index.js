@@ -26,8 +26,8 @@ var api = new ParseServer({
     module: '@parse/simple-mailgun-adapter',
     options: {
       fromAddress: 'Tim <tim@codepath.org>',
-      domain: 'sandbox3b6ab9f553b946498e8e71bd592cab1e.mailgun.org',
-      apiKey: 'fc522ea7c51aa4e2b8fd124a6d76c380-dc5f81da-9a4e24c4',
+      domain: process.env.MAILGUN_DOMAIN,
+      apiKey: process.env.MAILGUN_API_KEY,
     }
   }
 });
